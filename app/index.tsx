@@ -1,15 +1,16 @@
-import { Text, View } from "react-native";
+// App.js
+import StockChartScreen from "@/components/StockChartScreen";
+import React from "react";
+import { SafeAreaView, StatusBar, View } from "react-native";
+import "../global.css";
 
-export default function Index() {
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-white">
+      <StatusBar barStyle="dark-content" />
+      <View className="flex-1">
+        <StockChartScreen />
+      </View>
+    </SafeAreaView>
   );
 }
